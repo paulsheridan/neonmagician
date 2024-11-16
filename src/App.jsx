@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Flex } from "@chakra-ui/react";
+import Navbar from "./components/Landing/Navbar";
+import Footer from "./components/Landing/Footer";
+import Hero from "./components/Landing/Hero";
+import Logo from "./assets/images/grackleblue.png";
+import Pricing from "./components/Landing/Pricing";
+import Landing from "./components/Landing/Landing";
+import Current from "./components/Landing/Current";
+import ImageCarousel from "./components/Landing/ImageCarousel";
+import InstagramFeed from "./components/Landing/InstagramFeed";
+import FindUsSection from "./components/Landing/FindUsSection";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Flex direction="column" w="100%">
+      <Navbar />
+      <Hero
+        title="Welcome to Tattoo"
+        subtitle="It's called Grackle and it's for booking tattoos!"
+        image={Logo}
+        ctaText="Sign Up Now!"
+        ctaLink="/signup"
+      />
+      <ImageCarousel />
+      <InstagramFeed />
+      <FindUsSection />
+      <Footer />
+      {/* <Landing />
+      <Current /> */}
+    </Flex>
+  );
 }
+
 
 export default App
