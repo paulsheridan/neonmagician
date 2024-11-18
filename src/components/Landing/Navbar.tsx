@@ -25,24 +25,53 @@ import {
 import React from 'react'
 
 export default function WithSubnavigation() {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box>
+      {/* Top Section with Logo and Button */}
+      <Flex
+        bg={useColorModeValue('white', 'gray.800')}
+        color={useColorModeValue('gray.600', 'white')}
+        minH={'80px'} // Increased height
+        py={{ base: 4 }}
+        px={{ base: 4 }}
+        borderBottom={1}
+        borderStyle={'solid'}
+        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        align={'center'}
+        direction={'row'}
+        justify={'space-between'}
+      >
+        <Text
+          textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+          fontFamily={'heading'}
+          fontSize={'lg'}
+          color={useColorModeValue('gray.800', 'white')}
+        >
+          Logo
+        </Text>
+
+        <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
+          Book Now!
+        </Button>
+      </Flex>
+
+      {/* Navigation Section */}
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        align={'center'}
+      >
+        {/* Mobile Hamburger Menu */}
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}
+        >
           <IconButton
             onClick={onToggle}
             icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
@@ -50,49 +79,23 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
-          </Text>
 
+        {/* Desktop Navigation */}
+        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            Sign Up
-          </Button>
-        </Stack>
       </Flex>
 
+      {/* Mobile Navigation */}
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
     </Box>
-  )
+  );
 }
+
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
@@ -244,41 +247,28 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'About the Artist',
+    href: '#about', // Update the `href` to the actual link or section ID
   },
   {
-    label: 'Find Work',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'Available Designs',
+    href: '#designs',
   },
   {
-    label: 'Learn Design',
-    href: '#',
+    label: 'Tattoo Portfolio',
+    href: '#portfolio',
   },
   {
-    label: 'Hire Designers',
-    href: '#',
+    label: 'Aftercare Instructions',
+    href: '#aftercare',
   },
-]
+  {
+    label: 'Blog & Tips',
+    href: '#blog',
+  },
+  {
+    label: 'Consent Form',
+    href: '#consent-form',
+  },
+];
+

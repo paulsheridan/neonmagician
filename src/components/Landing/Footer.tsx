@@ -13,7 +13,6 @@ export default function Footer() {
       p={12}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
     >
-      <Box>{/* <Image src={Logo} alt="logo" p={6} boxSize="140px" /> */}</Box>
       <Text>© 2024 Gracle. All Rights Reserved.</Text>
     </Flex>
   );

@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/raleway/400.css";
+import "@fontsource/bungee";
 import { switchAnatomy } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
 
@@ -29,7 +30,7 @@ const disabledStyles = {
 const theme = extendTheme({
   fonts: {
     body: `'Raleway', sans-serif`,
-    heading: `'Raleway', sans-serif`,
+    heading: `'Bungee', sans-serif`,
   },
   colors: {
     ui: {
@@ -48,16 +49,7 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        height: "38px",
-        lineHeight: "38px",
-        border: "1px",
-        borderRadius: "4px",
-        fontSize: "11px",
-        fontWeight: "bold",
-        color: "#555",
-        borderColor: "#bbb",
-        textTransform: "uppercase",
-        backgroundColor: "ui.white",
+        borderRadius: '3xl',
         _hover: {
           backgroundColor: "transparent",
           color: "#333",

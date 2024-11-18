@@ -32,7 +32,7 @@ const ImageCarousel = () => {
   };
 
   return (
-    <Box position="relative" w="100%" py={8} overflow="hidden">
+    <Box position="relative" w="100%" py={8} px={4} overflow="hidden">
       {/* Chevron Controls */}
       <Flex justify="flex-end" mb={2}>
         <IconButton

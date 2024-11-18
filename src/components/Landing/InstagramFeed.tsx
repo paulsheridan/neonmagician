@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, SimpleGrid, Image, Text } from "@chakra-ui/react";
+import { Box, SimpleGrid, Image, Text, Button, Flex, Heading } from "@chakra-ui/react";
 
 const InstagramFeed = () => {
   const images = [
@@ -18,19 +18,24 @@ const InstagramFeed = () => {
   ];
 
   return (
-    <Box py={8} textAlign="center">
-      <Text fontSize="xl" fontWeight="bold" mb={4}>
-        Follow Us on Instagram
-      </Text>
+    <Box py={8} textAlign="center" px={4} >
+      <Flex align={'center'} direction={'row'} justify={'space-between'}>
+        <Heading fontSize="2xl" fontWeight="bold" mb={4}>
+          The Latest on Instagram:
+        </Heading>
+        <Heading fontSize="xl" fontWeight="bold" mb={4}>
+          @neon.magician.tattoo
+        </Heading>
+      </Flex>
       <SimpleGrid
-        columns={{ base: 2, lg: 6 }} // 2 columns on mobile, 6 on larger viewports
+        columns={{ base: 2, md: 4, lg: 6 }} // 2 columns on mobile, 6 on larger viewports
         spacing={4} // Gap between grid items
       >
         {images.map((src, index) => (
           <Box
             key={index}
             boxShadow="lg"
-            borderRadius="md"
+            borderRadius="xs"
             overflow="hidden"
             aspectRatio="1" // Ensures the images are perfect squares
           >
@@ -44,6 +49,9 @@ const InstagramFeed = () => {
           </Box>
         ))}
       </SimpleGrid>
+      <Button as={'a'} fontSize={'md'} fontWeight={400} href={'#'} mt={12} p={4}>
+        See Full Feed
+      </Button>
     </Box>
   );
 };

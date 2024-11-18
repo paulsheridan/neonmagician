@@ -16,8 +16,6 @@ function App() {
       <InstagramFeed />
       <FindUsSection />
       <Footer />
-      {/* <Landing />
-      <Current /> */}
     </Flex>
   );
 }
