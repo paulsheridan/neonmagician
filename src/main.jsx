@@ -4,7 +4,7 @@ import { ChakraProvider, Link } from '@chakra-ui/react'
 import {
   RouterProvider,
   createRouter,
-  createHashHistory,
+  createMemoryHistory,
   createRootRoute,
   createRoute,
 } from "@tanstack/react-router";
@@ -80,11 +80,8 @@ const routeTree = rootRoute.addChildren([
   consentFormRoute,
 ]);
 
-// Create the router
-const router = createRouter({
-  routeTree,
-  history: createHashHistory("/"),
-});
+
+const router = createRouter({ routeTree })
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

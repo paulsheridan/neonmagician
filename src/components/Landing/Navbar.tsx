@@ -40,21 +40,23 @@ export default function WithSubnavigation() {
         direction={"row"}
         justify={"space-between"}
       >
-        <Text
+        <Link
+          href="/"
+          variant={'plain'}
           textAlign={useBreakpointValue({ base: "center", md: "left" })}
           fontFamily={"heading"}
           fontSize={"2xl"}
           color={"ui.neonyellow"}
         >
           The Neon Magician
-        </Text>
+        </Link>
 
         <Button
           as={"a"}
           fontSize={"sm"}
           fontWeight={400}
           variant={"primary"}
-          href={"#"}
+          href={"/"}
         >
           Book Now!
         </Button>
@@ -255,26 +257,26 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "About the Artist",
-    href: "#about",
+    href: "/about",
   },
   {
     label: "Available Designs",
-    href: "#designs",
+    href: "/designs",
   },
   {
     label: "Tattoo Portfolio",
-    href: "#portfolio",
+    href: "/portfolio",
   },
   {
     label: "Aftercare Instructions",
-    href: "#aftercare",
+    href: "/aftercare",
   },
   {
     label: "Blog & Tips",
-    href: "#blog",
+    href: "/blog",
   },
   {
     label: "Consent Form",
-    href: "#consent",
+    href: "/consent",
   },
 ];
