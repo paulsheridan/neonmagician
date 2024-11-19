@@ -1,11 +1,19 @@
-import { Box, Text, Image, Button, Heading, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Image,
+  Button,
+  Heading,
+  Center,
+  Link,
+} from "@chakra-ui/react";
 import React from "react";
 
 export default function ErinProfile() {
   return (
     <Box
       bgGradient="linear(to-b, #FF0168, #FFF508)"
-      color="white"
+      color="black"
       p={8}
       borderRadius="md"
       display="flex"
@@ -34,7 +42,7 @@ export default function ErinProfile() {
           comfortable, let me know! Safety and comfort are top priorities for
           me.
         </Text>
-        <Text fontSize="lg" mb={4} color={"ui.neonpink"}>
+        <Text fontSize="lg" mb={4}>
           I'm sensitive and passionate, and I'm meticulous in my work. When I
           can bring myself to put time towards it, I enjoy floating in sensory
           deprivation pods, tumbling rocks, playing video games (The Legend of
@@ -43,10 +51,12 @@ export default function ErinProfile() {
           energy and heart.
         </Text>
         <Button
+          as={"a"}
           bg="ui.neonpink"
           color="white"
           _hover={{ bg: "pink.700" }}
           size="lg"
+          href={"https://neonmagician.as.me/"}
         >
           Book with me!
         </Button>
@@ -54,20 +64,19 @@ export default function ErinProfile() {
 
       {/* Image Section */}
       <Box
-          w="600px"
-          h="600px"
-          overflow="hidden"
-          borderRadius="2xl"
-          bg="gray.200"
-        >
-          <Center>
+        w="600px"
+        h="600px"
+        overflow="hidden"
+        borderRadius="2xl"
+        bg="gray.200"
+      >
+        <Center>
           <Image
-          src="/neonmagician/src/assets/images/IMG_5584_1719291231.JPG"
-          alt="Erin's portrait"
-          borderRadius="md"
-        />
-
-          </Center>
+            src="/neonmagician/src/assets/images/IMG_5584_1719291231.JPG"
+            alt="Erin's portrait"
+            borderRadius="md"
+          />
+        </Center>
       </Box>
     </Box>
   );

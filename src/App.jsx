@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import { Outlet } from "@tanstack/react-router";
-import Navbar from "./components/Landing/Navbar";
-import Footer from "./components/Landing/Footer";
+import Navbar from "./components/Common/Navbar";
+import Footer from "./components/Common/Footer";
 import React, { Suspense } from "react";
 
 class ErrorBoundary extends React.Component {

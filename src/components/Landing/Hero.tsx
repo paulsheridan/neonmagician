@@ -15,11 +15,10 @@ const Hero = () => {
       position="relative"
       display="flex"
       alignItems="center"
-      justifyContent="flex-start" // Align content to the left
+      justifyContent="flex-start"
       color="black"
-      px={8} // Add padding for spacing
+      px={8}
     >
-      {/* Hero Content */}
       <Stack
         spacing={0}
         zIndex="1" // Ensures content is above the overlay
@@ -38,12 +37,14 @@ const Hero = () => {
           Bellingham
         </Heading>
         <Button
+          as={"a"}
           size="lg"
           mt={8}
           colorScheme="pink"
           bg="ui.neonpink"
           _hover={{ bg: "pink.300" }}
-          alignSelf="flex-start" // Ensures button aligns with text on the left
+          alignSelf="flex-start"
+          href={"https://neonmagician.as.me/"}
         >
           Book an Appointment
         </Button>

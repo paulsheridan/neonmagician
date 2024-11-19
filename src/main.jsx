@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ChakraProvider, Link } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import {
   RouterProvider,
   createRouter,
-  createMemoryHistory,
+  createHashHistory,
   createRootRoute,
   createRoute,
 } from "@tanstack/react-router";
@@ -15,24 +15,22 @@ import Portfolio from "./components/Sections/Portfolio";
 import Aftercare from "./components/Sections/Aftercare";
 import Blog from "./components/Blog/Posts";
 import ConsentForm from "./components/Sections/ConsentForm";
-import Landing from "./components/Landing";
+import Landing from "./components/Sections/Landing";
 import theme from "./theme";
 import App from './App';
-import NotFound from './components/NotFound';
+import NotFound from './components/Common/NotFound';
 
 const rootRoute = createRootRoute({
   component: App,
   notFoundComponent: NotFound
 });
 
-// Define home route
 const homeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
   component: Landing,
 });
 
-// Define other routes
 const aboutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/about",
@@ -69,7 +67,6 @@ const consentFormRoute = createRoute({
   component: ConsentForm,
 });
 
-// Combine all routes
 const routeTree = rootRoute.addChildren([
   homeRoute,
   aboutRoute,
@@ -80,8 +77,10 @@ const routeTree = rootRoute.addChildren([
   consentFormRoute,
 ]);
 
-
-const router = createRouter({ routeTree })
+const router = createRouter({
+  routeTree,
+  history: createHashHistory("/"),
+});
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
