@@ -1,51 +1,53 @@
 import React from "react";
-import { Box, Button, Flex, Text, Link, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Text,
+  Link,
+  VStack,
+  Heading,
+} from "@chakra-ui/react";
 
 const FindUsSection = () => {
   return (
-    <Box py={8} px={4} bg="gray.50">
+    <Box py={8} px={4}>
       <Flex
-        direction={{ base: "column", md: "row" }} // Stack vertically on mobile, horizontally on desktop
+        direction={{ base: "column", md: "row" }}
         gap={6}
         alignItems="flex-start"
       >
-        {/* Google Map */}
-        <Box flex="1" minH="300px" borderRadius="md" overflow="hidden" boxShadow="lg">
+        <Box flex="1" minH="300px" borderRadius="md" boxShadow="lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.95373561575758!3d-37.81720984202119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e3c7b8d1dd0b!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1633329403284!5m2!1sen!2sau"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.6885161421847!2d-122.48127178731781!3d48.74964657119797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485a3155db2021f%3A0xac3aba8f6e1aaf26!2sNeon%20Magician%20Tattoo%20Studio!5e0!3m2!1sen!2sus!4v1731976067225!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowFullScreen={false}
             loading="lazy"
             title="Google Map"
           ></iframe>
         </Box>
 
-        {/* Contact Info */}
-        <VStack
-          flex="1"
-          align="flex-start"
-          spacing={4}
-          bg="white"
-          p={6}
-          borderRadius="md"
-          boxShadow="lg"
-        >
-          <Text fontSize="2xl" fontWeight="bold">
-            Find Us At
-          </Text>
-          <Text fontSize="lg">123 Victorian Avenue</Text>
-          <Text fontSize="lg">Gotham City, VG 45678</Text>
-          <Text fontSize="lg">Phone: (123) 456-7890</Text>
-          <Link fontSize="lg" color="blue.500" href="mailto:info@example.com">
-            Email: info@example.com
+        <VStack flex="1" align="flex-start" spacing={0}>
+          <Heading fontSize="2xl" fontWeight="bold">
+            Hit us up at:
+          </Heading>
+          <Text fontSize="lg">Neon Magician Tattoo</Text>
+          <Text fontSize="lg">103 E Holly St, Suite 523</Text>
+          <Text fontSize="lg">Bellingham, Washington 98225</Text>
+          <Text fontSize="lg">(360) 224-4116</Text>
+          <Link
+            fontSize="lg"
+            color="blue.500"
+            href="mailto:hello@neonmagician.com"
+          >
+            hello@neonmagician.com
           </Link>
           <Button
             as={Link}
-            href="https://www.google.com/maps/dir/?api=1&destination=123+Victorian+Avenue+Gotham+City"
-            target="_blank"
-            colorScheme="teal"
+            href="https://maps.app.goo.gl/9AjRZBNbhG74CXpM6"
+            variant="primary"
             size="lg"
             mt={4}
           >

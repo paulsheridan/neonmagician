@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, SimpleGrid, Image, Text, Button, Flex, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  SimpleGrid,
+  Image,
+  Text,
+  Button,
+  Flex,
+  Heading,
+} from "@chakra-ui/react";
 
 const InstagramFeed = () => {
   const images = [
@@ -18,12 +26,12 @@ const InstagramFeed = () => {
   ];
 
   return (
-    <Box py={8} textAlign="center" px={4} >
-      <Flex align={'center'} direction={'row'} justify={'space-between'}>
+    <Box py={8} textAlign="center" px={4}>
+      <Flex align={"center"} direction={"row"} justify={"space-between"}>
         <Heading fontSize="2xl" fontWeight="bold" mb={4}>
           The Latest on Instagram:
         </Heading>
-        <Heading fontSize="xl" fontWeight="bold" mb={4}>
+        <Heading fontSize="xl" fontWeight="bold" mb={4} color={"#60D6FB"}>
           @neon.magician.tattoo
         </Heading>
       </Flex>
@@ -49,7 +57,15 @@ const InstagramFeed = () => {
           </Box>
         ))}
       </SimpleGrid>
-      <Button as={'a'} fontSize={'md'} fontWeight={400} href={'#'} mt={12} p={4}>
+      <Button
+        as={"a"}
+        variant={"primary"}
+        fontSize={"md"}
+        fontWeight={400}
+        href={"#"}
+        mt={12}
+        p={4}
+      >
         See Full Feed
       </Button>
     </Box>

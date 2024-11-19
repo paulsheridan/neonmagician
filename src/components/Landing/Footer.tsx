@@ -13,7 +13,7 @@ export default function Footer() {
       p={12}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
     >
-      <Text>© 2024 Gracle. All Rights Reserved.</Text>
+      <Text>© 2024 The Neon Magician. All Rights Reserved.</Text>
     </Flex>
   );
 }

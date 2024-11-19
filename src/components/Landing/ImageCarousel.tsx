@@ -12,11 +12,13 @@ const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    "https://via.placeholder.com/300x300?text=Image+1",
-    "https://via.placeholder.com/300x300?text=Image+2",
-    "https://via.placeholder.com/300x300?text=Image+3",
-    "https://via.placeholder.com/300x300?text=Image+4",
-    "https://via.placeholder.com/300x300?text=Image+5",
+    "src/assets/gallery/IG_10.7.2024_670468e01239c3.88526526.webp",
+    "src/assets/gallery/IMG_5657_1728347085.webp",
+    "src/assets/gallery/2024-10-07_19-10-34_1728353450.webp",
+    "src/assets/gallery/2024-10-07_19-10-14_1728353426.webp",
+    "src/assets/gallery/2024-10-07_19-09-46_1728353399.webp",
+    "src/assets/gallery/2024-10-07_19-09-23_1728353381.webp",
+    "src/assets/gallery/2024-10-07_19-08-44_1728353350.webp",
   ];
 
   const visibleCount = useBreakpointValue({ base: 2, md: 3, lg: 4 });
@@ -26,9 +28,7 @@ const ImageCarousel = () => {
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) =>
-      Math.min(prev + 1, images.length - visibleCount)
-    );
+    setCurrentIndex((prev) => Math.min(prev + 1, images.length - visibleCount));
   };
 
   return (

@@ -38,18 +38,17 @@ const theme = extendTheme({
       secondary: "#EDF2F7",
       success: "#48BB78",
       danger: "#E53E3E",
-      light: "#FAFAFA",
-      dark: "#222",
-      darkSlate: "#252D3D",
-      dim: "#A0AEC0",
       black: "#000",
       white: "#fff",
+      neonpink: "#EA346B",
+      neongreen: "#72F351",
+      neonyellow: "#FEF453",
     },
   },
   components: {
     Button: {
       baseStyle: {
-        borderRadius: '3xl',
+        borderRadius: "3xl",
         _hover: {
           backgroundColor: "transparent",
           color: "#333",
@@ -65,13 +64,13 @@ const theme = extendTheme({
       },
       variants: {
         primary: {
-          backgroundColor: "ui.main",
-          color: "#FFF",
+          backgroundColor: "ui.neongreen",
+          color: "ui.black",
           borderColor: "ui.main",
           fontSize: "14px",
           fontWeight: "900",
           _hover: {
-            backgroundColor: "#1EAEDB",
+            backgroundColor: "#04a817",
             color: "#FFF",
             borderColor: "#1EAEDB",
           },
@@ -81,15 +80,6 @@ const theme = extendTheme({
               ...disabledStyles,
             },
           },
-        },
-        outline: {
-          backgroundColor: "transparent",
-          color: "ui.dark",
-          borderColor: "ui.dark",
-          fontSize: "14px",
-          fontWeight: "900",
-          border: "1px",
-          borderRadius: "4px",
         },
         danger: {
           backgroundColor: "ui.danger",
@@ -111,22 +101,6 @@ const theme = extendTheme({
         },
       },
     },
-    // td: {
-    //   paddingTop: "12px",
-    //   paddingRight: "15px",
-    //   textAlign: "left",
-    //   borderBottomWidth: "1px",
-    //   borderBottomStyle: "solid",
-    //   borderBottomColor: "#E1E1E1",
-    // },
-    // th: {
-    //   paddingTop: "12px",
-    //   paddingRight: "15px",
-    //   textAlign: "left",
-    //   borderBottomWidth: "1px",
-    //   borderBottomStyle: "solid",
-    //   borderBottomColor: "#E1E1E1",
-    // },
     Switch: switchTheme,
   },
 });
