@@ -1,8 +1,8 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import PDFViewer from "../Common/PDFViewer";
 
 const Aftercare = () => {
-  return <Text>Aftercare</Text>;
+  return <PDFViewer />;
 };
 
 export default Aftercare;
