@@ -8,6 +8,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React from "react";
+import photo from "../../assets/images/IMG_5584_1719291231.JPG";
 
 export default function ErinProfile() {
   return (
@@ -23,7 +24,6 @@ export default function ErinProfile() {
       textAlign={{ base: "center", md: "left" }}
       gap={8}
     >
-      {/* Text Section */}
       <Box flex="1">
         <Heading fontSize="3xl" fontWeight="bold" mb={4}>
           HEY! I'M ERIN.
@@ -71,11 +71,7 @@ export default function ErinProfile() {
         bg="gray.200"
       >
         <Center>
-          <Image
-            src="/neonmagician/src/assets/images/IMG_5584_1719291231.JPG"
-            alt="Erin's portrait"
-            borderRadius="md"
-          />
+          <Image src={photo} alt="Erin's portrait" borderRadius="md" />
         </Center>
       </Box>
     </Box>

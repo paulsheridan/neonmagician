@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import afterCarePDF from "../../assets/care/bb4c60c0-851f-11ef-be0a-1d02e425a915.pdf";
 
 const PDFViewer = () => {
   return (
@@ -13,9 +14,7 @@ const PDFViewer = () => {
       alignItems="center"
     >
       <iframe
-        src={
-          "/neonmagician/src/assets/care/bb4c60c0-851f-11ef-be0a-1d02e425a915.pdf"
-        }
+        src={afterCarePDF}
         style={{
           width: "100%",
           height: "100%",

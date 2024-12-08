@@ -41,7 +41,7 @@ export default function WithSubnavigation() {
         justify={"space-between"}
       >
         <Link
-          href="/"
+          href="neonmagician/"
           variant={"plain"}
           textAlign={useBreakpointValue({ base: "center", md: "left" })}
           fontFamily={"heading"}
@@ -150,7 +150,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      _hover={{ bg: "ui.neonpink" }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>

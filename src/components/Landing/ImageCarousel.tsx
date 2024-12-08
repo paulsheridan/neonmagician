@@ -7,19 +7,18 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import photo1 from "../../assets/images/gallery/IG_10.7.2024_670468e01239c3.88526526.webp";
+import photo2 from "../../assets/images/gallery/IMG_5657_1728347085.webp";
+import photo3 from "../../assets/images/gallery/2024-10-07_19-10-34_1728353450.webp";
+import photo4 from "../../assets/images/gallery/2024-10-07_19-10-14_1728353426.webp";
+import photo5 from "../../assets/images/gallery/2024-10-07_19-09-46_1728353399.webp";
+import photo6 from "../../assets/images/gallery/2024-10-07_19-09-23_1728353381.webp";
+import photo7 from "../../assets/images/gallery/2024-10-07_19-08-44_1728353350.webp";
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [
-    "/neonmagician/src/assets/gallery/IG_10.7.2024_670468e01239c3.88526526.webp",
-    "/neonmagician/src/assets/gallery/IMG_5657_1728347085.webp",
-    "/neonmagician/src/assets/gallery/2024-10-07_19-10-34_1728353450.webp",
-    "/neonmagician/src/assets/gallery/2024-10-07_19-10-14_1728353426.webp",
-    "/neonmagician/src/assets/gallery/2024-10-07_19-09-46_1728353399.webp",
-    "/neonmagician/src/assets/gallery/2024-10-07_19-09-23_1728353381.webp",
-    "/neonmagician/src/assets/gallery/2024-10-07_19-08-44_1728353350.webp",
-  ];
+  const images = [photo1, photo2, photo3, photo4, photo5, photo6, photo7];
 
   const visibleCount = useBreakpointValue({ base: 2, md: 3, lg: 4 });
 
