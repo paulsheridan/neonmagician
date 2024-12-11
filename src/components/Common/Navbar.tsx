@@ -256,26 +256,26 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "About the Artist",
-    href: "#about",
+    href: "about",
   },
   {
     label: "Available Designs",
-    href: "#designs",
+    href: "designs",
   },
   {
     label: "Tattoo Portfolio",
-    href: "#portfolio",
+    href: "portfolio",
   },
   {
     label: "Aftercare Instructions",
-    href: "#aftercare",
+    href: "aftercare",
   },
   {
     label: "Blog & Tips",
-    href: "#blog",
+    href: "blog",
   },
   {
     label: "Consent Form",
-    href: "#consent",
+    href: "consent",
   },
 ];

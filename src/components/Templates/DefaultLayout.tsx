@@ -1,8 +1,10 @@
+import React, { Suspense } from "react";
 import { Flex } from "@chakra-ui/react";
 import { Outlet } from "@tanstack/react-router";
-import Navbar from "./components/Common/Navbar";
-import Footer from "./components/Common/Footer";
-import React, { Suspense } from "react";
+import { HelmetProvider } from "react-helmet-async";
+
+import Navbar from "../Common/Navbar";
+import Footer from "../Common/Footer";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,23 +32,25 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-function App() {
+function DefaultLayout() {
   return (
     <ErrorBoundary>
-      <Navbar />
-      <Suspense
-        fallback={
-          <Flex justify="center" align="center" h="100vh">
-            Loading...
-          </Flex>
-        }
-      >
-        <Outlet />
-      </Suspense>
+      <HelmetProvider>
+        <Navbar />
+        <Suspense
+          fallback={
+            <Flex justify="center" align="center" h="100vh">
+              Loading...
+            </Flex>
+          }
+        >
+          <Outlet />
+        </Suspense>
 
-      <Footer />
+        <Footer />
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }
 
-export default App;
+export default DefaultLayout;

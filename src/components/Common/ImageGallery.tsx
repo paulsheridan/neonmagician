@@ -11,7 +11,7 @@ const ImageGallery = ({ images }) => {
     >
       {images.map((src, index) => (
         <Image
-          key={src}
+          key={index}
           w="100%"
           borderRadius="xl"
           mb={2}
