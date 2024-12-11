@@ -13,7 +13,7 @@ import Portfolio from "./components/Sections/Portfolio";
 import Aftercare from "./components/Sections/Aftercare";
 import Blog from "./components/Blog/Posts";
 import ConsentForm from "./components/Sections/ConsentForm";
-import DefaultLayout from "./components/Templates/DefaultLayout";
+import DefaultLayout from "./components/Layouts/DefaultLayout";
 
 const rootRoute = createRootRoute({
   component: DefaultLayout,
@@ -33,7 +33,7 @@ export const landingRoute = createRoute({
 
 export const aboutRoute = createRoute({
   getParentRoute: () => indexRoute,
-  path: "/about",
+  path: "/neonmagician/about",
   component: About,
 });
 

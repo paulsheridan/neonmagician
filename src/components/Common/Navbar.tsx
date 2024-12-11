@@ -41,7 +41,7 @@ export default function WithSubnavigation() {
         justify={"space-between"}
       >
         <Link
-          href="neonmagician/"
+          href="/"
           variant={"plain"}
           textAlign={useBreakpointValue({ base: "center", md: "left" })}
           fontFamily={"heading"}
@@ -198,7 +198,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       <Box
         py={2}
         as="a"
-        href={href ?? "#"}
+        href={href ?? "/"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
